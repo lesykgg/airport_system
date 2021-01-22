@@ -8,9 +8,7 @@
 /public/assets
 .byebug_history
 /config/master.key
-/config/database.yml
 .env
-.ruby-version
 /.idea/**/*
 .DS_Store
 /coverage/**/*
