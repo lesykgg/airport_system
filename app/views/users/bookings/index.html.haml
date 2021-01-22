@@ -1,0 +1,24 @@
+- model_class = Booking
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+%table.table.table-striped.w-100
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:user)
+      %th= model_class.human_attribute_name(:flight)
+      %th= model_class.human_attribute_name(:checked_in)
+      %th= model_class.human_attribute_name(:seat_number)
+      %th=t '.actions', :default => t("helpers.actions")
+  %tbody
+    - bookings.each do |booking|
+      %tr
+        %td= link_to booking.user.full_name, user_path(booking.user)
+        %td= link_to booking.flight.formatted_number, flight_path(booking.flight)
+        %td= booking.checked_in
+        %td= booking.seat_number
+        %td
+          - if booking.checked_in?
+            = link_to t('.uncheck'), user_booking_check_in_path(user, booking), :method => :delete, :class => 'btn btn-xs btn-danger'
+          - else
+            = link_to t('.check_in'), user_booking_check_in_path(user, booking), :method => :post, :class => 'btn btn-xs btn-success'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), user_booking_path(user, booking), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'

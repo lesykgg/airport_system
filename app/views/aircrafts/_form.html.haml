@@ -1,0 +1,11 @@
+= simple_form_for aircraft do |form|
+  .form-group
+    = form.association :airline, label_method: :name, collection: Airline.all
+  .form-row
+    .form-group.col-md-6
+      = form.input :manufacturer
+    .form-group.col-md-6
+      = form.input :model
+  .form-row
+    = form.input :capacity
+  = form.button :submit, class: "btn btn-large btn-primary", "data-disable-with" => "Submitting.."

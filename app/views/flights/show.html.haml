@@ -1,0 +1,24 @@
+- model_class = Flight
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
+%p
+  %strong= model_class.human_attribute_name(:from) + ':'
+  %br
+  = flight.from.name
+%p
+  %strong= model_class.human_attribute_name(:destination) + ':'
+  %br
+  = flight.destination.name
+%p
+  %strong= model_class.human_attribute_name(:departure) + ':'
+  %br
+  = flight.departure
+%p
+  %strong= model_class.human_attribute_name(:arrival) + ':'
+  %br
+  = flight.arrival
+
+
+= link_to t('.back', :default => t("helpers.links.back")), flights_path, :class => 'btn btn-default'
+= link_to t('.edit', :default => t("helpers.links.edit")), edit_flight_path(flight), :class => 'btn btn-default'
+= link_to t('.destroy', :default => t("helpers.links.destroy")), flight_path(flight), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

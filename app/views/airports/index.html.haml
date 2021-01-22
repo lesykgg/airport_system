@@ -1,0 +1,23 @@
+- model_class = Airport
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+%table.table.table-striped.w-100
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:name)
+      %th= model_class.human_attribute_name(:icao)
+      %th= model_class.human_attribute_name(:iata)
+      %th= model_class.human_attribute_name(:country)
+      %th=t '.actions', :default => t("helpers.actions")
+  %tbody
+    - airports.each do |airport|
+      %tr
+        %td= airport.name
+        %td= airport.icao
+        %td= airport.iata
+        %td= airport.country
+        %td
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_airport_path(airport), :class => 'btn btn-default btn-xs'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), airport_path(airport), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
+
+= link_to t('.new', :default => t("helpers.links.new")), new_airport_path, :class => 'btn btn-primary'

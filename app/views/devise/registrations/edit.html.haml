@@ -1,0 +1,24 @@
+%h2
+  Edit #{resource_name.to_s.humanize}
+= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+  = f.error_notification
+  .form-row
+    .form-group.col-md-6
+      = f.input :first_name
+    .form-group.col-md-6
+      = f.input :last_name
+    .form-group.col-md-12
+      = f.input :email, required: true, autofocus: true
+    - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+      %p
+        Currently waiting confirmation for: #{resource.unconfirmed_email}
+    .form-row
+      .form-group.col-md-4
+        = f.input :current_password, hint: "we need your current password to confirm your changes", required: true, input_html: { autocomplete: "current-password" }
+      .form-group.col-md-4
+        = f.input :password, hint: "leave it blank if you don't want to change it", required: false, input_html: { autocomplete: "new-password" }
+      .form-group.col-md-4
+        = f.input :password_confirmation, required: false, input_html: { autocomplete: "new-password" }
+  .form-row
+    = f.button :submit, "Update", class: 'btn btn-primary'
+= link_to "Back", :back

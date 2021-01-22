@@ -1,0 +1,9 @@
+%div{:style => "text-align:center;padding:1em 0;"}
+  %iframe{:frameborder => "0", :height => "115", :seamless => "", :src => "https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=en&size=medium&timezone=Europe%2FAmsterdam", :width => "100%"}
+
+#flights
+
+:javascript
+  $.ajax({url: "/flights"}).done(function(html) {
+    return $("#flights").append(html);
+  });

@@ -1,0 +1,16 @@
+.navbar.navbar-fixed-top.navbar-inverse
+  .container
+    %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    %a.navbar-brand(href=root_path) Airport
+    .navbar-collapse.collapse.navbar-responsive-collapse
+      %ul.nav.navbar-nav
+        %li= link_to t(:title, scope: :flights), flights_path
+        - if current_user&.admin?
+          %li= link_to t(:title, scope: :users), users_path
+          %li= link_to t(:title, scope: :aircrafts), aircrafts_path
+          %li= link_to t(:title, scope: :airlines), airlines_path
+          %li= link_to t(:title, scope: :airports), airports_path
+      = render 'layouts/user_items'

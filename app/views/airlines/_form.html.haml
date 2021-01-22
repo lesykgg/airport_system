@@ -1,0 +1,6 @@
+= simple_form_for airline do |form|
+  .form-group
+    = form.input :name
+  .form-group
+    = form.input :shortened
+  = form.button :submit, class: "btn btn-large btn-primary", "data-disable-with" => "Submitting.."

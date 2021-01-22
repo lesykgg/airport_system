@@ -1,0 +1,10 @@
+= simple_form_for airport do |form|
+  .form-group
+    = form.input :name
+  .form-group
+    = form.input :icao
+  .form-group
+    = form.input :iata
+  .form-group
+    = form.input :country
+  = form.button :submit, class: "btn btn-large btn-primary", "data-disable-with" => "Submitting.."

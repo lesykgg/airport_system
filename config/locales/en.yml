@@ -1,0 +1,88 @@
+en:
+  users:
+    only_admin: Unauthorized
+    title: Users
+    sign_up: Sign up
+    login: Login
+    logout: Logout
+    edit_profile: Edit profile
+    index:
+      make_admin: Make Admin
+      make_user: Make User
+    admins:
+      create:
+        success: User was successfully marked as an Admin
+        failure: Unable to mark the user as an Admin
+      destroy:
+        success: User was successfully marked as an User
+        failure: Unable to mark the user as an User
+    bookings:
+      title: Bookings
+      index:
+        uncheck: Revoke Check-In
+        check_in: Check-In
+      create:
+        success: Booking was successfully created
+        failure: Booking wasn't created. %{message}
+      update:
+        success: Booking was successfully updated
+        failure: Booking wasn't updated. %{message}
+      destroy:
+        success: Booking was successfully deleted
+        failure: Booking wasn't deleted. %{message}
+      check_ins:
+        title: Check-in
+        create:
+          success: Successfully checked-in
+          failure: Unable to check-in. %{message}
+        destroy:
+          success: Check-in successfully revoked
+          failure: Unable to revoke check-in. %{message}
+  flights:
+    title: Flights
+    index:
+      book: Book
+    create:
+      success: Flight was successfully created
+      failure: Flight wasn't created. %{message}
+    update:
+      success: Flight was successfully updated
+      failure: Flight wasn't updated. %{message}
+    destroy:
+      success: Flight was successfully deleted
+      failure: Flight wasn't deleted. %{message}
+  airlines:
+    title: Airlines
+    create:
+      success: Airline was successfully created
+      failure: Airline wasn't created. %{message}
+    update:
+      success: Airline was successfully updated
+      failure: Airline wasn't updated. %{message}
+    destroy:
+      success: Airline was successfully deleted
+      failure: Airline wasn't deleted. %{message}
+  aircrafts:
+    title: Aircrafts
+    create:
+      success: Aircraft was successfully created
+      failure: Aircraft wasn't created. %{message}
+    update:
+      success: Aircraft was successfully updated
+      failure: Aircraft wasn't updated. %{message}
+    destroy:
+      success: Aircraft was successfully deleted
+      failure: Aircraft wasn't deleted. %{message}
+  airports:
+    title: Airports
+    create:
+      success: Airport was successfully created
+      failure: Airport wasn't created. %{message}
+    update:
+      success: Airport was successfully updated
+      failure: Airport wasn't updated. %{message}
+    destroy:
+      success: Airport was successfully deleted
+      failure: Airport wasn't deleted. %{message}
+
+

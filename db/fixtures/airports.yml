@@ -1,0 +1,31 @@
+- name: Lviv Danylo Halytskyi International Airport
+  iata: LWO
+  icao: UKLL
+  country: Ukraine
+  gates_count: 7
+- name: Boryspil International Airport
+  iata: KBP
+  icao: UKBB
+  country: Ukraine
+  gates_count: 15
+- name: Warsaw Chopin
+  iata: WAW
+  icao: EPWA
+  country: Poland
+  gates_count: 12
+- name: Istambul International Airport
+  iata: IST
+  icao: LTFM
+  country: Turkey
+  gates_count: 10
+- name: Ben Gurion Tel Aviv International Airport
+  iata: TLV
+  icao: LLBG
+  country: Israel
+  gates_count: 8
+- name: M. R. Štefánik Bratislava International Airport
+  iata: BTS
+  icao: LZIB
+  country: Slovakia
+  gates_count: 5
+

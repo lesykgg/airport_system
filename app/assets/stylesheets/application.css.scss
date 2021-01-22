@@ -1,0 +1,58 @@
+/*
+  *= require_self
+  *= require bootstrap-datetimepicker
+  *= require_tree .
+*/
+
+.page-header {
+  text-align: center;
+}
+
+.container {
+  max-width: 100%;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 70px;
+}
+
+section{
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+
+  a {
+    color: #555;
+
+    &:hover {
+      color: #222;
+    }
+  }
+
+  small {
+    float: left;
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}

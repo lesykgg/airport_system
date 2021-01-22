@@ -1,0 +1,18 @@
+= simple_form_for flight do |form|
+  .form-group
+    = form.input :number
+  .form-group
+    = form.association :aircraft, label_method: :formatted_name
+  .form-row
+    .form-group.col-md-6
+      = form.association :from
+    .form-group.col-md-6
+      = form.association :destination
+  .form-row
+    .form-group.col-md-6
+      = form.input :departure, as: :datetime_picker
+    .form-group.col-md-6
+      = form.input :arrival, as: :datetime_picker
+  .form-group
+    = form.association :gate, collection: base_airport.gates.all, label_method: :formatted_gate_index
+  = form.button :submit, class: "btn btn-large btn-primary", "data-disable-with" => "Submitting.."

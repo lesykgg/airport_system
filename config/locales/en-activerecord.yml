@@ -1,0 +1,8 @@
+en:
+  activerecord:
+    errors:
+      models:
+        flight:
+          attributes:
+            base:
+              base_airport_inclusion: Base airport should be included as departure/arrival
